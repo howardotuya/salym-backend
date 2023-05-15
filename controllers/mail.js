@@ -36,15 +36,21 @@ exports.subscribe = async (req, res, next) => {
 };
 
 exports.contact = async (req, res, next) => {
-  const email = req.body;
-
-  return console.log(email)
+  const { fname, phone, emailAddress, companyName, methodOfContact, like, interest} = req.body;
 
   const emailData = {
     from: process.env.EMAIL_FROM,
-    to: email,
-    subject: "Newsletter Subscriber",
-    text: `New Subscriber: ${email}`,
+    to: "",
+    subject: "get In Touch",
+    text: `
+    FullName: ${fname} \n
+    Phone Number: ${phone} \n
+    Email Address: ${emailAddress} \n
+    Company Name: ${companyName} \n
+    Preferred Method of Contact: ${methodOfContact} \n
+    I would like to:: ${like} \n
+    I am Interested: ${JSON.stringify(interest)} \n
+    `,
   };
 
   let transporter = nodemailer.createTransport({

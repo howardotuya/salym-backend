@@ -7,7 +7,7 @@ const allowedorigins = ['http://localhost:3000', 'http://localhost:5000'];
 const app = express();
 
 app.use(express.json());
-app.use(cors({
+app.use(cors({ 
     origin: allowedorigins
 }))
 
