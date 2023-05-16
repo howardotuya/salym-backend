@@ -6,7 +6,7 @@ exports.subscribe = async (req, res, next) => {
 
   const emailData = {
     from: process.env.EMAIL_FROM,
-    to: email,
+    to: process.env.EMAIL_FROM,
     subject: "Newsletter Subscriber",
     text: `New Subscriber: ${email}`,
   };
@@ -40,7 +40,7 @@ exports.contact = async (req, res, next) => {
 
   const emailData = {
     from: process.env.EMAIL_FROM,
-    to: "",
+    to: process.env.EMAIL_FROM,
     subject: "get In Touch",
     text: `
     FullName: ${fname} \n
