@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({ 
     origin: allowedorigins
-}))
+})) 
 
 app.use("/api/mail", require('./routes/mail'));
 
