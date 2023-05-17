@@ -3,7 +3,7 @@ const errorHandler = require("./middleware/errorHandler");
 const express = require('express');
 const cors = require('cors');
 
-const allowedorigins = ['http://localhost:3000', 'https://vercel.com/jaulf/salym-wellness-center/7SmufaTJAVJwkB2CQ7G7jThv1sXK' , 'http://localhost:5000', 'https://salym-wellness-center.vercel.app/', 'https://salymwellness.center/', 'https://www.salymwellness.center/'];
+const allowedorigins = ['http://localhost:3000', 'https://salym-wellness-center-git-main-jaulf.vercel.app' , 'https://salym-wellness-center-jaulf.vercel.app' , 'https://salym-wellness-center.vercel.app', 'https://salymwellness.center', 'https://www.salymwellness.center'];
 const app = express();
 
 app.use(express.json());
